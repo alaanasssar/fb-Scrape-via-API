@@ -1,7 +1,9 @@
 # fb-Scrape-via-API
 facebook Scrape via API to any url using php
 
-This a small code can get some data form any url , By facebook Graph API Explorer , All you need get a Access Token form facebook 
+This a small code can get some data form any url , By facebook Graph API Explorer , All you need get a Access Token form facebook.
+
+And this debug information from Graph API Explorer, without using facebook sdk php.
 
 ```
 === Query
