@@ -3,6 +3,22 @@ facebook Scrape via API to any url using php
 
 This a small code can get some data form any url , By facebook Graph API Explorer , All you need get a Access Token form facebook.
 
+```php
+$link = 'url';
+$access_token = 'accessToken';
+$url = 'https://graph.facebook.com/v2.9/?scrape=true&id='.$link.'&access_token='.$access_token.'';
+$json = file_get_contents($url, false, stream_context_create(
+    array (
+        'http' => array(
+            'method'    => 'POST',
+            'header'    => 'Content-type: application/x-www-form-urlencoded',
+            'content'   =>  $url
+        )
+    )
+));
+$obj = json_decode($json, true); 
+```
+
 And this debug information from Graph API Explorer, without using facebook sdk php.
 
 ```
